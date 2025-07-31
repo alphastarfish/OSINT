@@ -1,0 +1,17 @@
+{
+  "name": "profit-website",
+  "version": "1.0.0",
+  "description": "High-converting affiliate marketing website",
+  "main": "index.html",
+  "scripts": {
+    "start": "python3 -m http.server 8000",
+    "build": "echo 'Build completed'",
+    "dev": "python3 -m http.server 8000"
+  },
+  "keywords": ["affiliate", "marketing", "monetization", "website"],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "tailwindcss": "^3.3.0"
+  }
+}
