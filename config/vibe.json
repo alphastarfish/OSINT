@@ -1,0 +1,18 @@
+{
+  "dashboard": {
+    "title": "VIBE Core Dashboard",
+    "theme": "cyborg",
+    "auto_refresh": true,
+    "refresh_interval": 5000
+  },
+  "data_sources": {
+    "threat_intel": "data/vibe_core.db",
+    "operator_nodes": "data/vibe_core.db",
+    "missions": "data/vibe_core.db"
+  },
+  "ai_models": {
+    "threat_classifier": "models/threat_classifier.pkl",
+    "behavior_analyzer": "models/behavior_analyzer.pkl",
+    "decision_engine": "models/decision_engine.pkl"
+  }
+}
