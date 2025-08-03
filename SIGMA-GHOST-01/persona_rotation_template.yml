@@ -1,0 +1,402 @@
+# 🎭 SIGMA GHOST PERSONA ROTATION TEMPLATE
+# Classification: OPERATIONAL SECURITY
+# Version: 1.0
+# Rotation Cycle: 96 Hours
+# Node: SIGMA-GHOST-01
+
+# ================================
+# PERSONA MANAGEMENT FRAMEWORK
+# ================================
+
+global_config:
+  rotation_interval: "96h"  # 4 days
+  overlap_period: "2h"      # Transition window
+  emergency_burn_time: "15m" # Rapid persona destruction
+  attribution_delay: "72h"   # Minimum time before reuse
+  
+  # Operational Security
+  opsec_level: "MAXIMUM"
+  compartmentalization: true
+  plausible_deniability: true
+  attribution_resistance: true
+
+# ================================
+# ALPHA PERSONA - CYBERSECURITY RESEARCHER
+# ================================
+alpha_persona:
+  codename: "DR_CIPHER"
+  category: "ACADEMIC_RESEARCHER"
+  
+  # Identity Framework
+  identity:
+    role: "Independent Cybersecurity Researcher"
+    affiliation: "Tech University (Fictional)"
+    specialization: "Threat Intelligence & Malware Analysis"
+    experience_level: "Senior (10+ years)"
+    
+  # Digital Footprint
+  digital_presence:
+    email_domain: "protonmail.com"
+    social_media:
+      - platform: "LinkedIn"
+        handle: "dr-cipher-research"
+        followers: "2500-5000"
+        activity: "Professional posts on threat trends"
+      - platform: "Twitter/X"
+        handle: "@ThreatIntelDoc"
+        followers: "8000-12000"
+        activity: "Threat intel sharing, conference updates"
+    
+    professional_sites:
+      - "ResearchGate profile with published papers"
+      - "Personal blog on cybersecurity trends"
+      - "GitHub with open-source security tools"
+    
+  # Communication Style
+  communication:
+    tone: "Professional, academic, analytical"
+    vocabulary: "Technical cybersecurity terminology"
+    writing_style: "Formal research papers, technical blogs"
+    languages: ["English (native)", "German (proficient)"]
+    
+  # Operational Capabilities
+  access_justification:
+    - "Academic research on threat landscapes"
+    - "Malware analysis for educational purposes"
+    - "Threat intelligence gathering for publications"
+    - "Conference presentation preparation"
+    
+  # Cover Activities
+  legitimate_activities:
+    - "Publishing security research papers"
+    - "Speaking at cybersecurity conferences"
+    - "Consulting for academic institutions"
+    - "Peer review for security journals"
+    
+  # OPSEC Considerations
+  vulnerabilities:
+    - "Academic publishing history can be traced"
+    - "Conference appearances create attribution points"
+    - "Peer network may expose inconsistencies"
+  
+  mitigation:
+    - "Use established academic publication networks"
+    - "Maintain consistent research timeline"
+    - "Leverage legitimate academic credentials"
+
+# ================================
+# BETA PERSONA - GOVERNMENT CONTRACTOR
+# ================================
+beta_persona:
+  codename: "PATRIOT_SHIELD"
+  category: "GOVERNMENT_CONTRACTOR"
+  
+  # Identity Framework
+  identity:
+    role: "Senior Cybersecurity Analyst"
+    affiliation: "Defense Contractor (Fictional)"
+    clearance_level: "Secret (Fictional)"
+    specialization: "Nation-state threat analysis"
+    
+  # Digital Footprint
+  digital_presence:
+    email_domain: "contractor-company.com"
+    social_media:
+      - platform: "LinkedIn"
+        handle: "patriot-shield-analyst"
+        followers: "1500-3000"
+        activity: "Government cybersecurity insights"
+    
+    professional_sites:
+      - "Company website with analyst profile"
+      - "Government contractor directory listing"
+      - "Security clearance job board presence"
+    
+  # Communication Style
+  communication:
+    tone: "Professional, security-conscious, formal"
+    vocabulary: "Government/military cybersecurity terms"
+    writing_style: "Policy briefs, threat assessments"
+    languages: ["English (native)"]
+    
+  # Operational Capabilities
+  access_justification:
+    - "Government contract threat intelligence"
+    - "Nation-state adversary research"
+    - "Critical infrastructure protection analysis"
+    - "Security clearance investigation support"
+    
+  # Cover Activities
+  legitimate_activities:
+    - "Government cybersecurity consulting"
+    - "Threat briefings for federal agencies"
+    - "Security clearance maintenance"
+    - "Contractor conference participation"
+    
+  # OPSEC Considerations
+  vulnerabilities:
+    - "Security clearance databases can be verified"
+    - "Government contractor vetting processes"
+    - "Federal contract award records"
+  
+  mitigation:
+    - "Use realistic but unverifiable contractors"
+    - "Maintain plausible government connections"
+    - "Leverage legitimate cleared community"
+
+# ================================
+# GAMMA PERSONA - CORPORATE SECURITY VENDOR
+# ================================
+gamma_persona:
+  codename: "SENTINEL_DYNAMICS"
+  category: "COMMERCIAL_VENDOR"
+  
+  # Identity Framework
+  identity:
+    role: "Threat Intelligence Director"
+    affiliation: "Cybersecurity Vendor (Fictional)"
+    specialization: "Commercial threat hunting"
+    market_focus: "Enterprise security solutions"
+    
+  # Digital Footprint
+  digital_presence:
+    email_domain: "sentinel-dynamics.com"
+    social_media:
+      - platform: "LinkedIn"
+        handle: "sentinel-dynamics-intel"
+        followers: "5000-10000"
+        activity: "Vendor threat intelligence updates"
+      - platform: "Twitter/X"
+        handle: "@SentinelIntel"
+        followers: "15000-25000"
+        activity: "Real-time threat alerts, product updates"
+    
+    professional_sites:
+      - "Company website with executive bio"
+      - "Cybersecurity vendor marketplace listings"
+      - "Industry analyst coverage mentions"
+    
+  # Communication Style
+  communication:
+    tone: "Professional, sales-oriented, authoritative"
+    vocabulary: "Commercial cybersecurity terminology"
+    writing_style: "Marketing materials, threat reports"
+    languages: ["English (native)", "Spanish (conversational)"]
+    
+  # Operational Capabilities
+  access_justification:
+    - "Commercial threat intelligence services"
+    - "Customer security incident response"
+    - "Product development threat research"
+    - "Competitive intelligence gathering"
+    
+  # Cover Activities
+  legitimate_activities:
+    - "Cybersecurity product development"
+    - "Customer threat briefings"
+    - "Industry conference presentations"
+    - "Partner integration projects"
+    
+  # OPSEC Considerations
+  vulnerabilities:
+    - "Corporate registration records"
+    - "Industry analyst coverage verification"
+    - "Customer reference checks"
+  
+  mitigation:
+    - "Use realistic but small vendor profile"
+    - "Maintain authentic commercial presence"
+    - "Leverage industry vendor networks"
+
+# ================================
+# DELTA PERSONA - INTERNATIONAL ACADEMIC
+# ================================
+delta_persona:
+  codename: "GLOBAL_SCHOLAR"
+  category: "INTERNATIONAL_ACADEMIC"
+  
+  # Identity Framework
+  identity:
+    role: "Visiting Research Fellow"
+    affiliation: "International University Exchange"
+    specialization: "Global cybersecurity policy"
+    geographic_focus: "Cross-border cyber threats"
+    
+  # Digital Footprint
+  digital_presence:
+    email_domain: "international-university.edu"
+    social_media:
+      - platform: "LinkedIn"
+        handle: "global-scholar-cyber"
+        followers: "3000-6000"
+        activity: "International cybersecurity policy"
+      - platform: "Academia.edu"
+        handle: "Global Scholar Profile"
+        activity: "International research publications"
+    
+    professional_sites:
+      - "University exchange program listings"
+      - "International conference speaker profiles"
+      - "Global cybersecurity policy forums"
+    
+  # Communication Style
+  communication:
+    tone: "Academic, international perspective, diplomatic"
+    vocabulary: "International relations, cyber policy"
+    writing_style: "Policy papers, diplomatic briefings"
+    languages: ["English (fluent)", "French (native)", "Mandarin (basic)"]
+    
+  # Operational Capabilities
+  access_justification:
+    - "International cybersecurity research"
+    - "Cross-border threat analysis"
+    - "Global policy development support"
+    - "Academic exchange program activities"
+    
+  # Cover Activities
+  legitimate_activities:
+    - "International cybersecurity conferences"
+    - "Academic research collaboration"
+    - "Policy development consultation"
+    - "Cross-cultural cyber threat studies"
+    
+  # OPSEC Considerations
+  vulnerabilities:
+    - "University verification systems"
+    - "International academic networks"
+    - "Visa and travel record correlation"
+  
+  mitigation:
+    - "Use legitimate academic exchange programs"
+    - "Maintain consistent international presence"
+    - "Leverage authentic academic credentials"
+
+# ================================
+# ROTATION SCHEDULE MATRIX
+# ================================
+rotation_schedule:
+  cycle_1:  # Hours 0-24
+    primary_persona: "alpha_persona"
+    backup_persona: "beta_persona"
+    emergency_persona: "gamma_persona"
+    
+  cycle_2:  # Hours 24-48
+    primary_persona: "beta_persona"
+    backup_persona: "gamma_persona"
+    emergency_persona: "delta_persona"
+    
+  cycle_3:  # Hours 48-72
+    primary_persona: "gamma_persona"
+    backup_persona: "delta_persona"
+    emergency_persona: "alpha_persona"
+    
+  cycle_4:  # Hours 72-96
+    primary_persona: "delta_persona"
+    backup_persona: "alpha_persona"
+    emergency_persona: "beta_persona"
+
+# ================================
+# EMERGENCY PROCEDURES
+# ================================
+emergency_protocols:
+  burn_procedures:
+    immediate:
+      - "Terminate all active sessions"
+      - "Clear browser data and caches"
+      - "Rotate IP address via VPN"
+      - "Switch to emergency persona"
+    
+    short_term:
+      - "Deactivate compromised social media"
+      - "Change all associated credentials"
+      - "Notify team of persona compromise"
+      - "Initiate 72-hour cooling period"
+    
+    long_term:
+      - "Conduct attribution analysis"
+      - "Update persona vulnerability assessment"
+      - "Revise operational procedures"
+      - "Create new replacement persona"
+  
+  compromise_indicators:
+    - "Unexpected account lockouts"
+    - "Unusual authentication requests"
+    - "Social media interaction anomalies"
+    - "Email delivery failures"
+    - "Website access restrictions"
+  
+  recovery_procedures:
+    - "Assess compromise extent"
+    - "Isolate affected systems"
+    - "Implement alternate personas"
+    - "Conduct damage assessment"
+    - "Update security measures"
+
+# ================================
+# TECHNICAL IMPLEMENTATION
+# ================================
+technical_specs:
+  browser_profiles:
+    - "Separate browser instances per persona"
+    - "Unique user agent strings"
+    - "Persona-specific extensions"
+    - "Isolated cookie stores"
+    - "Custom timezone settings"
+  
+  network_isolation:
+    - "VPN endpoint per persona"
+    - "Separate proxy chains"
+    - "Geographic IP distribution"
+    - "DNS server rotation"
+    - "Traffic pattern randomization"
+  
+  credential_management:
+    - "Encrypted credential vaults"
+    - "Automated password rotation"
+    - "Multi-factor authentication"
+    - "Biometric backup systems"
+    - "Emergency access codes"
+
+# ================================
+# PERFORMANCE METRICS
+# ================================
+success_metrics:
+  attribution_resistance:
+    target: "Zero attribution events per cycle"
+    measurement: "Automated monitoring systems"
+    
+  operational_effectiveness:
+    target: "95% collection success rate"
+    measurement: "Mission completion tracking"
+    
+  security_incidents:
+    target: "Zero persona compromises"
+    measurement: "Security event correlation"
+    
+  cover_maintenance:
+    target: "100% cover story consistency"
+    measurement: "Automated verification checks"
+
+# ================================
+# LEGAL AND ETHICAL GUIDELINES
+# ================================
+compliance_framework:
+  legal_boundaries:
+    - "Operate within applicable laws"
+    - "Respect platform terms of service"
+    - "Avoid identity theft or fraud"
+    - "Maintain ethical intelligence practices"
+  
+  ethical_considerations:
+    - "Minimize collateral impact"
+    - "Protect innocent third parties"
+    - "Maintain operational transparency with team"
+    - "Respect privacy where possible"
+  
+  documentation_requirements:
+    - "Log all persona activities"
+    - "Maintain attribution audit trails"
+    - "Document security incidents"
+    - "Record compliance violations"
+
+# End of Persona Rotation Template
