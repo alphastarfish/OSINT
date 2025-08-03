@@ -1,0 +1,103 @@
+version: '3.8'
+
+services:
+  bot:
+    build: .
+    container_name: multi-platform-bot
+    restart: unless-stopped
+    environment:
+      # Bot tokens (set these in .env file)
+      - DISCORD_TOKEN=${DISCORD_TOKEN}
+      - TELEGRAM_TOKEN=${TELEGRAM_TOKEN}
+      - SLACK_TOKEN=${SLACK_TOKEN}
+      - SLACK_SIGNING_SECRET=${SLACK_SIGNING_SECRET}
+      
+      # Platform toggles
+      - ENABLE_DISCORD=${ENABLE_DISCORD:-true}
+      - ENABLE_TELEGRAM=${ENABLE_TELEGRAM:-true}
+      - ENABLE_SLACK=${ENABLE_SLACK:-true}
+      
+      # Bot settings
+      - COMMAND_PREFIX=${COMMAND_PREFIX:-!}
+      - BOT_NAME=${BOT_NAME:-MultiBot}
+      - BOT_DESCRIPTION=${BOT_DESCRIPTION:-A versatile multi-platform bot}
+      
+      # Admin settings
+      - ADMIN_USERS=${ADMIN_USERS}
+      
+      # Database
+      - DATABASE_URL=${DATABASE_URL:-sqlite:///data/bot.db}
+      - REDIS_URL=redis://redis:6379
+      
+      # Logging
+      - LOG_LEVEL=${LOG_LEVEL:-INFO}
+      - LOG_FORMAT=${LOG_FORMAT:-text}
+    
+    volumes:
+      - bot_data:/app/data
+      - ./logs:/app/logs
+    
+    depends_on:
+      - redis
+    
+    networks:
+      - bot_network
+
+  redis:
+    image: redis:7-alpine
+    container_name: bot-redis
+    restart: unless-stopped
+    command: redis-server --appendonly yes
+    volumes:
+      - redis_data:/data
+    networks:
+      - bot_network
+    ports:
+      - "6379:6379"  # Remove this in production
+
+  # Optional: Database for more complex storage needs
+  postgres:
+    image: postgres:15-alpine
+    container_name: bot-postgres
+    restart: unless-stopped
+    environment:
+      - POSTGRES_DB=botdb
+      - POSTGRES_USER=botuser
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD:-changeme}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - bot_network
+    ports:
+      - "5432:5432"  # Remove this in production
+    profiles:
+      - with-postgres
+
+  # Optional: Web interface for bot management
+  web:
+    build: .
+    container_name: bot-web
+    restart: unless-stopped
+    command: ["python", "-m", "uvicorn", "bot-app.web:app", "--host", "0.0.0.0", "--port", "8000"]
+    environment:
+      - DATABASE_URL=${DATABASE_URL:-sqlite:///data/bot.db}
+      - REDIS_URL=redis://redis:6379
+    ports:
+      - "8000:8000"
+    volumes:
+      - bot_data:/app/data
+    depends_on:
+      - redis
+    networks:
+      - bot_network
+    profiles:
+      - with-web
+
+volumes:
+  bot_data:
+  redis_data:
+  postgres_data:
+
+networks:
+  bot_network:
+    driver: bridge

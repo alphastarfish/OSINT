@@ -1,0 +1,35 @@
+# Core bot framework
+discord.py==2.3.2
+python-telegram-bot==20.7
+slack-sdk==3.26.1
+asyncio==3.4.3
+
+# Web framework for webhooks
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+
+# Database and storage
+aiosqlite==0.19.0
+redis==5.0.1
+
+# Configuration and environment
+python-dotenv==1.0.0
+pydantic==2.5.0
+pydantic-settings==2.1.0
+
+# Utilities
+aiohttp==3.9.1
+requests==2.31.0
+python-dateutil==2.8.2
+pytz==2023.3
+
+# Logging and monitoring
+structlog==23.2.0
+prometheus-client==0.19.0
+
+# Development and testing
+pytest==7.4.3
+pytest-asyncio==0.21.1
+black==23.11.0
+flake8==6.1.0
+mypy==1.7.1
