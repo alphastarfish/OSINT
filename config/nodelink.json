@@ -1,0 +1,19 @@
+{
+  "network": {
+    "hub_id": "SIGMA-HUB-01",
+    "max_nodes": 1000,
+    "heartbeat_interval": 30,
+    "timeout": 300
+  },
+  "security": {
+    "encryption": "AES-256-GCM",
+    "signature_algorithm": "HMAC-SHA256",
+    "key_size": 32,
+    "rotation_interval": 3600
+  },
+  "database": {
+    "path": "data/nodelink.db",
+    "backup_interval": 3600,
+    "retention_days": 90
+  }
+}
