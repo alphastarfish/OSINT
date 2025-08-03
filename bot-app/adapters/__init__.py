@@ -1,0 +1,1 @@
+# Platform adapters for different chat services
